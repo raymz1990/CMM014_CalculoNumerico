@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.39">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -60,16 +60,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="trabalho-12_files/libs/clipboard/clipboard.min.js"></script>
-<script src="trabalho-12_files/libs/quarto-html/quarto.js"></script>
-<script src="trabalho-12_files/libs/quarto-html/popper.min.js"></script>
-<script src="trabalho-12_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="trabalho-12_files/libs/quarto-html/anchor.min.js"></script>
-<link href="trabalho-12_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="trabalho-12_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="trabalho-12_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="trabalho-12_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="trabalho-12_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/quarto.js"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="index_files/libs/quarto-html/anchor.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="index_files/libs/bootstrap/bootstrap-8a79a254b8e706d3c925cde0a310d4f0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -144,6 +144,12 @@ window.Quarto = {
 
 <section id="introdução" class="level2">
 <h2 class="anchored" data-anchor-id="introdução">1. Introdução</h2>
+</section>
+<section id="apresentação" class="level2">
+<h2 class="anchored" data-anchor-id="apresentação">Apresentação</h2>
+<ul>
+<li><a href="./slides/slides.html">Slides</a></li>
+</ul>
 <p>Modelar fenômenos reais a partir de dados é uma das tarefas mais importantes da matemática aplicada. Em especial, quando se trata de prever o crescimento de uma população ao longo do tempo, modelos exponenciais se mostram bastante eficazes. Esses modelos, porém, exigem que ajustemos curvas a dados empíricos, um problema classicamente resolvido por <strong>métodos de mínimos quadrados</strong>.</p>
 <p>A <strong>Decomposição em Valores Singulares (SVD)</strong> é uma ferramenta poderosa da álgebra linear que decompõe uma matriz em três componentes: <span class="math inline">\(U\)</span>, <span class="math inline">\(\Sigma\)</span> e <span class="math inline">\(V^T\)</span>. Essa decomposição não só fornece informações importantes sobre a matriz, como seu posto e condicionamento, mas também oferece uma maneira robusta de resolver sistemas lineares sobredeterminados, como os que surgem no problema de quadrados mínimos.</p>
 <p>Este trabalho tem como objetivo aplicar a técnica de <strong>(SVD)</strong> para resolver um sistema sobredeterminado oriundo do ajuste de uma curva exponencial a dados de crescimento populacional. Utilizaremos o ambiente <strong>Julia</strong> para realizar os cálculos numéricos.</p>
@@ -319,8 +325,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -431,7 +435,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
